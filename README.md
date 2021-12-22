@@ -10,6 +10,8 @@ Hadoop based processes will often rely on appending to outputs, but if you need 
 The technique is able to bring the downtime to 0 on unpartitioned tables and to bring it to a second’s scale when dealing with partitioned tables.
 
 ## Walkthrough
+*Important: This walkthrough will use CDK to deploy resources into the target account, including a service role, a Glue Job and a Table. Do not run this code in a production environment.*
+
 To demonstrate the table replacement in action we will create a CloudFormation stack containing:
 
 - A Glue Service role to run the workflow that will overwrite the target table
